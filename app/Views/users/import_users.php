@@ -108,7 +108,7 @@
 									<td><?= $key['user_email']; ?></td>
 									<td></td>
 									<td style="text-align: center;">
-										<span class="btn btn-icon btn-xs"><i class="fa fa-trash-alt" title="Delete Profile"></i></span>
+										<span class="btn btn-icon btn-xs "><i class="fa fa-trash-alt" title="Delete Profile"></i></span>
 										<span class="btn btn-icon btn-xs"><i class="fa fa-unlock-alt" title="Change Password"></i></span>
 										<span class="btn btn-icon btn-xs"><i class="fa fa-sync-alt" title="Change Password"></i></span>
 									</td>

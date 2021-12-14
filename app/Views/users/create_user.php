@@ -134,7 +134,7 @@
 							<tbody>
 								<?php $i=1;foreach (array_reverse($all_user) as $key) {
 								if (session()->get('id') != $key['user_id']) {
-									$role = (new HomeModel())->getData(array('role_id'=>$key['user_role_id']),'sales_user_role');
+									$role = (new HomeModel())->getData(array('role_id'=>$key['user_role_id']),'cos_user_role');
 								?>
 								<tr>
 									<td><?= $i++; ?></td>

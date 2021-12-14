@@ -2,7 +2,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use \App\Models\HomeModel;
-use \App\Models\userModel;
+use \App\Models\UserModel;
 use PHPExcel;
 use PHPExcel_IOFactory;
 
@@ -14,7 +14,7 @@ class User extends Controller
 		$data = [
 			"success"=>session()->getFlashdata('success'),
 			"user" => (new HomeModel())->where(array('user_id'=>session()->get('id'),'user_isDelete'=> 0))->findAll(),			
-			"user_role" => (new HomeModel())->getData("role_id != 1 AND role_isValid = 0",'sales_user_role'),
+			"user_role" => (new HomeModel())->getData("role_id != 1 AND role_isValid = 0",'cos_user_role'),
 			"all_user" => (new HomeModel())->where("user_role_id NOT IN(1,5) AND user_isDelete = 0")->findAll(),	
 		];
 
@@ -38,6 +38,21 @@ class User extends Controller
 		return view('users/create_user', $data);
 	}
 
+	public function deleteUser()
+		{
+			$c_id = $_POST['client_id'];
+			print_r($c_id);
+			$model= $this->ClientModel->userD($c_id.'','sales_user',array('client_isDelete'=>1));
+			
+			$data = [
+			"success" => session()->getFlashdata('success'),
+			"error" => session()->getFlashdata('error'),
+			"info" => session()->getFlashdata('info'),
+			"client"=>(new ClientModel())->where('client_isDelete',0)->findAll(),
+			
+		];
+		return view('users/create_user',$data);
+		}
 	public function import_users_details()
 	{
 		helper('text');

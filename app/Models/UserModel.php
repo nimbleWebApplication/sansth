@@ -4,7 +4,7 @@
 
 	class UserModel extends Model
 	{		
-		protected $table = "sales_user";
+		protected $table = "cos_user";
 		protected $primaryKey = 'user_id';
 
     	protected $returnType     = 'array';

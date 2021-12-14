@@ -4,7 +4,7 @@
 
 	class HomeModel extends Model
 	{
-		protected $table = "sales_user";
+		protected $table = "cos_user";
 		protected $primaryKey = 'user_id';
 
     	protected $returnType     = 'array';
@@ -21,7 +21,6 @@
 		function insertData($data,$table){
 			$builder = $this->db->table($table);
 			$builder->insert($data);
-			echo $this->db->getLastQuery();
 			if ($this->db->affectedRows()) {
 				return true;			
 			}else{
@@ -70,7 +69,7 @@
 		function getDepartment($comp_id)
 		{
 			$sql="SELECT * FROM sales_department WHERE dept_id IN (SELECT cp_department FROM sales_contact_person WHERE cp_company = ".$comp_id." AND cp_isDelete = 0) AND dept_isDelete = 0";
-			$result=$this->db->query($sql, null, false)->getResultArray();			
+			$result=$this->db->query($sql, null, false)->getResultArray();	
 			return $result;
 		}
 	}

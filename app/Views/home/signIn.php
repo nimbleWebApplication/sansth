@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Ozone Sales | Login</title>
+  <title>Co-operative Sanstha| Login</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Favicons -->
@@ -49,8 +49,8 @@
         cursor: pointer;
     }
     .btn-primary,.btn-primary:hover,.btn-primary:active{
-      background-color: #a9e050!important;
-      border-color: #a9e050 !important;
+      background-color: #ffd35f!important;
+      border-color: #ffd35f !important;
       color: #000000;
       border-radius: 2px;
     }
@@ -69,7 +69,7 @@
     .login__box{
       margin: 0px;
       height: 730px ;
-          background-image: linear-gradient(140deg,#004872 0%,rgb(253 253 255 / 92%) 100%),url(http://ozoneinfo.in/Oz0ne/wp-content/uploads/2021/03/it-services-04.jpg)!important;
+          background-image: linear-gradient(140deg,#bf231b 0%,rgb(253 253 255 / 92%) 100%),url(<?= base_url(); ?>/public/dist/img/meeting.jpg)!important;
     }
     .company-details{
       position: absolute;

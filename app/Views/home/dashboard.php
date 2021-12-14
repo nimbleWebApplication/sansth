@@ -24,101 +24,68 @@
       <div class="content">
         <div class="container">
           <div class="row">
-            <?php if(session()->get('role_id') == '3' || session()->get('role_id') == '2'){ ?>
+            <?php //if(session()->get('role_id') == '3' || session()->get('role_id') == '4'){ ?>
             <div class="col-lg-2 col-6">
               <!-- small box -->
-              <div class="small-box bg-info">
+              <div style="background-color: #30b977;color:white;"class="small-box">
                 <div class="inner">
-                  <h3><?= count($lead); ?></h3>
+                
 
-                  <p>Lead</p>
+                  <p>Sanstha</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <a href="<?= site_url("sales/pre-sales"); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="<?= site_url('sanstha/sanstha_details/9999'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
-            <?php } ?>
+             <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div style="background-color: #f9d62c;" class="small-box">
+                <div class="inner">
+                
+
+                  <p>Maharashtra</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="<?= site_url('sanstha/sanstha_details/22'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div style="background-color: #30b977;color:white;" class="small-box">
+                <div class="inner">
+                
+
+                  <p>Karnataka</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="<?= site_url("sanstha/sanstha_details/17"); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div style="background-color: #f9d62c;" class="small-box">
+                <div class="inner">
+                
+
+                  <p>Goa</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="<?= site_url("sanstha/sanstha_details/11"); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+
+            <?php //} ?>
             <!-- ./col -->
-            <?php if(session()->get('role_id') == '3' || session()->get('role_id') == '2' || session()->get('role_id') == '4'){ ?>
-            <div class="col-lg-2 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3><?= count($bid); ?></h3>
-                  <p>Bid </p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="<?= site_url("bid/bid_details"); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right fa-sm"></i></a>
-              </div>
-            </div>
-            <?php } ?>
-            <!-- ./col -->
-            <?php if(session()->get('role_id') == '3' || session()->get('role_id') == '2'){ ?>
-            <div class="col-lg-2 col-6">
-              <!-- small box -->
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3>0</h3>
-
-                  <p>Order</p>
-                </div>
-                <div class="icon">
-                  <!-- <i class="ion ion-pie-graph"></i> -->
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>0</h3>
-
-                  <p>Delivery</p>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-truck"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-2 col-6">
-              <!-- small box -->
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3>0</h3>
-
-                  <p>Closer / Payment</p>
-                </div>
-                <div class="icon">
-                  <!-- <i class="fas fa-closed-captioning"></i> -->
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-2 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>0</h3>
-
-                  <p>Reports</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right fa-sm"></i></a>
-              </div>
-            </div>
-            <?php } ?>
+           
           </div>
           <!-- /.row -->
         </div><!-- /.container-fluid -->

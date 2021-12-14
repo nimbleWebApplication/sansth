@@ -44,7 +44,7 @@ class Home extends Controller
 				$user = $home->where(array('user_email'=>$this->request->getVar('user_email')))
 							->first();
 				$this->setUserSession($user);
-				session()->setFlashdata('success','Welcome to Ozone Info.');
+				session()->setFlashdata('success','Welcome to Co-operative Sanstha.');
 				if (session()->get('role_id') == 1) {
 					return redirect()->to('dashboard');
 				}else if(session()->get('role_id') == 2) {
@@ -60,7 +60,6 @@ class Home extends Controller
 		}
 		return view('home/signIn', $data);
 	}
-
 	private function setUserSession($user)
 	{
 		$data = [
@@ -79,28 +78,25 @@ class Home extends Controller
 			'os' => $agent->getPlatform(),
 			'hash' => password_hash("".date('Y-m-d-H:i:s')."_".$user['user_id']."_".$this->request->getIPAddress()."_".$agent->getPlatform()."", PASSWORD_DEFAULT),
 		];
-		(new HomeModel())->insertData($user_session,'jinlms_user_session');
+		(new HomeModel())->insertData($user_session,'cos_user_session');
 		return true;
 	}
-
 	function dashboard()
 	{	
 		$home = new HomeModel();
 		$data = [
 			"success"=>session()->getFlashdata('success'),
 			"user" => (new HomeModel())->where(array('user_id'=>session()->get('id'),'user_isDelete'=> 0))->findAll(),			
-			"bid" => (new BidModel())->where(array('bid_isDelete'=> 0))->findAll(),			
-			"lead" => (new LeadModel())->where(array('lead_isDelete'=> 0))->findAll(),			
+			// "bid" => (new BidModel())->where(array('bid_isDelete'=> 0))->findAll(),			
+			// "lead" => (new LeadModel())->where(array('lead_isDelete'=> 0))->findAll(),			
 		];
 		// print_r($data['success']);die();
 		return view('home/dashboard', $data);
 	}
-
 	public function logout()
 	{
 		session()->destroy();
 		session()->setFlashdata('info','Thank You..!');
 		return redirect()->route('login');
 	}
-
 }

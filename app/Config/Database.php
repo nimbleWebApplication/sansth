@@ -34,8 +34,8 @@ class Database extends Config
 		'DSN'      => '',
 		'hostname' => 'localhost',
 		'username' => 'root',
-		'password' => '',
-		'database' => 'ozoneapps',
+		'password' => 'nimble@123',
+		'database' => 'cosdm',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
@@ -47,7 +47,7 @@ class Database extends Config
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 3308,
+		'port'     => 3306,
 	];
 
 	/**
@@ -73,7 +73,7 @@ class Database extends Config
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 3306,
+		'port'     => 3308,
 	];
 
 	//--------------------------------------------------------------------
